@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DriveMon Plug-in
+Bundle-SymbolicName: DriveMon;singleton:=true
+Bundle-Version: 1.0.8
+Bundle-Activator: drivemon.DriveMon
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: PurpleScout AB
+Export-Package: drivemon

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="drivemon.application.DriveMonApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="drivemon.application.Perspective"
+            id="DriveMon.application.perspective"
+            name="DriveMon Perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="DriveMon.application.application"
+            name="DriveMon">
+         <property
+               name="windowImages"
+               value="platform:/plugin/DriveMon/icons/saveall_edit.gif">
+         </property>
+         <property
+               name="appName"
+               value="DriveMon">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any">
+         <command
+               commandId="org.eclipse.ui.window.preferences"
+               label="Preferences"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
